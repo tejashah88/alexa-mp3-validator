@@ -1,0 +1,22 @@
+{
+  "name": "alexa-mp3-validator",
+  "version": "0.0.1",
+  "description": "A library that validates your MP3 files to be used in your Amazon Alexa skill.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tejashah88/alexa-mp3-validator.git"
+  },
+  "author": "Tejas Shah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tejashah88/alexa-mp3-validator/issues"
+  },
+  "homepage": "https://github.com/tejashah88/alexa-mp3-validator#readme",
+  "dependencies": {
+    "mp3-parser": "^0.3.0"
+  }
+}
