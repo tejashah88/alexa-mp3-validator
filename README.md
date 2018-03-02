@@ -1,9 +1,6 @@
 # alexa-mp3-validator
 
-[![NPM](https://nodei.co/npm/alexa-mp3-validator.png)](https://www.npmjs.com/package/alexa-mp3-validator/)
-
 ![NPM Version](https://img.shields.io/npm/v/alexa-mp3-validator.svg)
-[![dependencies Status](https://david-dm.org/alexa-js/alexa-mp3-validator/status.svg)](https://david-dm.org/tejashah88/alexa-mp3-validator)
 
 A library that validates your MP3 files to be used in your Amazon Alexa skill.
 
@@ -35,6 +32,6 @@ mp3Validator('path/to/file.mp3');
 * [biril](https://github.com/biril) for his [mp3-parser](https://github.com/biril/mp3-parser) module which handles the actual logic of processing the MP3 files.
 
 ### License
-Copyright (c) 2016-2017 Tejas Shah
+Copyright (c) 2016-2018 Tejas Shah
 
 MIT License, see [LICENSE](https://tejashah88.mit-license.org/2016-2017) for details.
