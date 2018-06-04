@@ -24,12 +24,11 @@ mp3Validator('path/to/file.mp3');
 ## TODO
 * Add mocha or tap tests
 * Add Travis CI integration and code coverage (coveralls.io)
-* Add CLI support
 * Add function to check if url-hosted MP3 is ready to use with Alexa
 
 ### Mentions
-* [okofish](https://github.com/okofish) for his [ssmlol](https://github.com/okofish/ssmlol) library, which allows you to do the same thing but for python and inspired this module
-* [biril](https://github.com/biril) for his [mp3-parser](https://github.com/biril/mp3-parser) module which handles the actual logic of processing the MP3 files.
+* [okofish](https://github.com/okofish) for [ssmlol](https://github.com/okofish/ssmlol), a CLI-version of this module in python.
+* [biril](https://github.com/biril) for [mp3-parser](https://github.com/biril/mp3-parser), which handles the actual logic of processing the MP3 files.
 
 ### License
 Copyright (c) 2016-2018 Tejas Shah
