@@ -1,3 +1,5 @@
+'use strict';
+
 const fs = require('fs');
 
 // Computes the mode in an array. All modes will be returned.

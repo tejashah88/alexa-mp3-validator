@@ -1,4 +1,6 @@
-const { Mp3Header } = require('mp3-header');
+'use strict';
+
+const Mp3Header = require('mp3-header').Mp3Header;
 const getMP3Duration = require('get-mp3-duration');
 
 const utils = require('./utils');
