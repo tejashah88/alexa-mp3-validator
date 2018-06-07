@@ -1,0 +1,79 @@
+[
+  {
+    "name": "sample-1",
+    "size": 24908,
+    "alexaReady": true,
+    "metadata": {
+      "version": 2,
+      "bitrate": 48000,
+      "samplingRate": 16000,
+      "duration": 4140
+    }
+  },
+  {
+    "name": "sample-2",
+    "size": 29853,
+    "alexaReady": true,
+    "metadata": {
+      "version": 2,
+      "bitrate": 48000,
+      "samplingRate": 16000,
+      "duration": 4968
+    }
+  },
+  {
+    "name": "sample-3",
+    "size": 23529,
+    "alexaReady": false,
+    "metadata": {
+      "version": 2,
+      "bitrate": 32000,
+      "samplingRate": 16000,
+      "duration": 4248
+    }
+  },
+  {
+    "name": "sample-4",
+    "size": 31701,
+    "alexaReady": false,
+    "metadata": {
+      "version": 2,
+      "bitrate": 40000,
+      "samplingRate": 22050,
+      "duration": 5068
+    }
+  },
+  {
+    "name": "sample-5",
+    "size": 31861,
+    "alexaReady": false,
+    "metadata": {
+      "version": 2,
+      "bitrate": 40000,
+      "samplingRate": 16000,
+      "duration": 5076
+    }
+  },
+  {
+    "name": "sample-6",
+    "size": 633097,
+    "alexaReady": false,
+    "metadata": {
+      "version": 2,
+      "bitrate": 48000,
+      "samplingRate": 16000,
+      "duration": 104436
+    }
+  },
+  {
+    "name": "sample-7",
+    "size": 543673,
+    "alexaReady": true,
+    "metadata": {
+      "version": 2,
+      "bitrate": 48000,
+      "samplingRate": 16000,
+      "duration": 89532
+    }
+  }
+]

@@ -1,8 +1,11 @@
 # alexa-mp3-validator
 
 ![NPM Version](https://img.shields.io/npm/v/alexa-mp3-validator.svg)
+[![Build Status](https://travis-ci.org/tejashah88/alexa-mp3-validator.svg?branch=master)](https://travis-ci.org/tejashah88/alexa-mp3-validator)
+[![Coverage Status](https://coveralls.io/repos/github/tejashah88/alexa-mp3-validator/badge.svg)](https://coveralls.io/github/tejashah88/alexa-mp3-validator)
+[![dependencies Status](https://david-dm.org/tejashah88/alexa-mp3-validator/status.svg)](https://david-dm.org/tejashah88/alexa-mp3-validator)
 
-A library that validates your MP3 files to be used in your Amazon Alexa skill.
+A node module for validating your MP3 files to be used in your Amazon Alexa skill. If you are looking for a CLI version, check out [ssmlol](https://github.com/okofish/ssmlol). If you want to convert your mp2 files to be usable by Alexa, check out [this website](https://www.jovo.tech/audio-converter).
 
 ### Requirements of Alexa-ready MP3 Files
 
@@ -10,27 +13,67 @@ Every MP3 file you want Alexa to play must meet several basic requirements. They
 * A valid (MPEG version 2) MP3 file
 * No longer than 90 seconds
 * Encoded with a bit rate of exactly 48 kbps
-* Encoded with a sample rate of 16000 Hz
+* Encoded with a sample rate of exactly 16,000 Hz
 
 ## Usage
 
-The module will check the aforementioned requirements and throw an error if it fails and of them.
+The module will check the requirements and return a Promise that returns true or false. An error will be thrown if the module is unable to read the file.
 
+#### Function signature
 ```javascript
-var mp3Validator = require('alexa-mp3-validator');
-mp3Validator('path/to/file.mp3');
+Boolean validateMP3(String filepath, optional Boolean throwOnValidationError = false)
+```
+
+#### Using with Promises
+```javascript
+const { validateMP3 } = require('alexa-mp3-validator');
+validateMP3('path/to/file.mp3')
+  .then(isValid => {
+    // more logic goes here
+  })
+  .catch(err => {
+    // error handling logic goes here
+  })
+```
+
+#### Using with async/await
+```javascript
+const { validateMP3 } = require('alexa-mp3-validator');
+(async () => {
+  try {
+    let isValid = await validateMP3('path/to/file.mp3');
+    // more logic goes here
+  } catch (err) {
+    // error handling logic goes here
+  }
+})()
+```
+
+By default, if a validation error occurs, it will return false. By setting `throwOnValidationError` to true, all errors will throw.
+
+#### Using with async/await and `throwOnValidationError = true`
+```javascript
+const { validateMP3, AudioValidationError } = require('alexa-mp3-validator');
+(async () => {
+  try {
+    let isValid = await validateMP3('path/to/file.mp3', true);
+    // more logic goes here
+  } catch (err) {
+    if (err instanceof AudioValidationError) {
+      // validation error handling logic goes here
+    } else {
+      // other error handling logic goes here
+    }
+  }
+})()
+```
+
+### Testing
+Testing is done with mocha and chai.js.
+
+```bash
+npm test
 ```
 
 ## TODO
-* Add mocha or tap tests
-* Add Travis CI integration and code coverage (coveralls.io)
-* Add function to check if url-hosted MP3 is ready to use with Alexa
-
-### Mentions
-* [okofish](https://github.com/okofish) for [ssmlol](https://github.com/okofish/ssmlol), a CLI-version of this module in python.
-* [biril](https://github.com/biril) for [mp3-parser](https://github.com/biril/mp3-parser), which handles the actual logic of processing the MP3 files.
-
-### License
-Copyright (c) 2016-2018 Tejas Shah
-
-MIT License, see [LICENSE](https://tejashah88.mit-license.org/2016-2017) for details.
+* Add CI integration and code coverage
