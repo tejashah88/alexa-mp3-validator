@@ -74,6 +74,3 @@ Testing is done with mocha and chai.js.
 ```bash
 npm test
 ```
-
-## TODO
-* Add CI integration and code coverage
