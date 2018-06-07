@@ -12,10 +12,9 @@ module.exports = function getMp3Metadata(buffer) {
   while (pos >= 0) {
     let header = new Mp3Header(buffer.slice(pos, pos + 4));
     if (header.parsed && header.is_valid && header.mpeg_bitrate && header.mpeg_samplerate) {
-      let { mpeg_version, mpeg_bitrate, mpeg_samplerate } = header;
-      versions.push(mpeg_version);
-      bitrates.push(mpeg_bitrate);
-      samplingRates.push(mpeg_samplerate);
+      versions.push(header.mpeg_version);
+      bitrates.push(header.mpeg_bitrate);
+      samplingRates.push(header.mpeg_samplerate);
     }
 
     pos = buffer.indexOf(0xFF, pos + 1);
