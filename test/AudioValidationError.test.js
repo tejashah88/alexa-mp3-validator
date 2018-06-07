@@ -1,4 +1,4 @@
-const { expect } = require('chai');
+const expect = require('chai').expect;
 const AudioValidationError = require('../src/AudioValidationError');
 const EXAMPLE_MSG = 'Example message';
 

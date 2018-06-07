@@ -1,7 +1,7 @@
 const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
 chai.use(chaiAsPromised);
-const { expect } = chai;
+const expect = require('chai').expect;
 
 const getMp3Metadata = require('../src/mp3-metadata');
 const utils = require('../src/utils');

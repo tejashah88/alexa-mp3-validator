@@ -1,6 +1,6 @@
 {
   "name": "alexa-mp3-validator",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A node module for validating your MP3 files to be used in your Amazon Alexa skill.",
   "main": "src/mp3-validator.js",
   "scripts": {

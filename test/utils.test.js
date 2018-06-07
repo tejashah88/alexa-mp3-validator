@@ -1,7 +1,7 @@
 const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
 chai.use(chaiAsPromised);
-const { expect } = chai;
+const expect = require('chai').expect;
 
 const utils = require('../src/utils');
 const fileInfos = require('./fixtures/metadata.json');

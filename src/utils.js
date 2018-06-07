@@ -1,5 +1,4 @@
 const fs = require('fs');
-const util = require('util');
 
 // Computes the mode in an array. All modes will be returned.
 const mode = arr => [...new Set(arr)]
@@ -8,6 +7,15 @@ const mode = arr => [...new Set(arr)]
   .filter((v, i, a) => v[1] === a[0][1])
   .map(v => v[0]);
 
-const getFileBuffer = util.promisify(fs.readFile);
+function getFileBuffer(...args) {
+  return new Promise((resolve, reject) => {
+    fs.readFile(...args, (err, data) => {
+      if (err)
+        reject(err);
+      else
+        resolve(data);
+    });
+  });
+}
 
 module.exports = { mode, getFileBuffer };

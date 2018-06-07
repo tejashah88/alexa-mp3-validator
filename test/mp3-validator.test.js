@@ -1,7 +1,7 @@
 const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
 chai.use(chaiAsPromised);
-const { expect } = chai;
+const expect = require('chai').expect;
 
 const { validateMP3 } = require('../src/mp3-validator');
 const AudioValidationError = require('../src/AudioValidationError');

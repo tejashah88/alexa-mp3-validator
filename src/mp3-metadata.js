@@ -1,4 +1,4 @@
-const { Mp3Header, XingHeader } = require('mp3-header');
+const { Mp3Header } = require('mp3-header');
 const getMP3Duration = require('get-mp3-duration');
 
 const utils = require('./utils');
