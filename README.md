@@ -1,6 +1,6 @@
 # alexa-mp3-validator
 
-![NPM Version](https://img.shields.io/npm/v/alexa-mp3-validator.svg)
+[![NPM Version](https://img.shields.io/npm/v/alexa-mp3-validator.svg)](https://www.npmjs.com/package/alexa-mp3-validator)
 [![Build Status](https://travis-ci.org/tejashah88/alexa-mp3-validator.svg?branch=master)](https://travis-ci.org/tejashah88/alexa-mp3-validator)
 [![Coverage Status](https://coveralls.io/repos/github/tejashah88/alexa-mp3-validator/badge.svg)](https://coveralls.io/github/tejashah88/alexa-mp3-validator)
 [![dependencies Status](https://david-dm.org/tejashah88/alexa-mp3-validator/status.svg)](https://david-dm.org/tejashah88/alexa-mp3-validator)
@@ -66,11 +66,4 @@ const { validateMP3, AudioValidationError } = require('alexa-mp3-validator');
     }
   }
 })()
-```
-
-### Testing
-Testing is done with mocha and chai.js.
-
-```bash
-npm test
 ```

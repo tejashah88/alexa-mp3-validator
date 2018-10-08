@@ -4,7 +4,7 @@ sudo: false
 
 matrix:
   include:
-  - node_js: 8
+  - node_js: node
     script:
       - npm run-script lint
       - npm run-script test-with-coverage
@@ -14,7 +14,6 @@ node_js:
 - 7
 - 8
 - 9
-- 10
 
 cache:
   directories:

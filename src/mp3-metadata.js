@@ -5,6 +5,15 @@ const getMP3Duration = require('get-mp3-duration');
 
 const utils = require('./utils');
 
+/*
+ * This function is for getting the metadata of an MP3, specifically the version, bitrate and
+ * sampling rate. It does this by selecting a header range to pull the potential metadata and
+ * then skipping every 255 bits (or 0xFF) for a new header position. This is done because several
+ * loosely conducted experiments revealed that relying on any one position for the header showed
+ * contradictory results to the expected metadata. After collecting the array of possible versions,
+ * bitrates, and sampling rates, it takes the most occurring value as the most probable value
+ * for describing the property of that MP3 file.
+ */
 module.exports = function getMp3Metadata(buffer) {
   let pos = buffer.indexOf(0xFF);
   let versions = [], bitrates = [], samplingRates = [];
