@@ -42,5 +42,17 @@ describe('utils', function() {
         });
       });
     }
+
+    it('should fail when trying to read from an invalid path', function () {
+      let sampleFile = `./test/fixtures/invalid.mp3`;
+      let invalidPromisedBuffer = utils.getFileBuffer(sampleFile);
+
+      it('should return a fulfilled Promise', function() {
+        return Promise.all([
+          expect(invalidPromisedBuffer).to.be.a('promise'),
+          expect(invalidPromisedBuffer).to.be.rejected
+        ]);
+      });
+    });
   });
 });

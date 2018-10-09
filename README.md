@@ -5,7 +5,10 @@
 [![Coverage Status](https://coveralls.io/repos/github/tejashah88/alexa-mp3-validator/badge.svg)](https://coveralls.io/github/tejashah88/alexa-mp3-validator)
 [![dependencies Status](https://david-dm.org/tejashah88/alexa-mp3-validator/status.svg)](https://david-dm.org/tejashah88/alexa-mp3-validator)
 
-A node module for validating your MP3 files to be used in your Amazon Alexa skill. If you are looking for a CLI version, check out [ssmlol](https://github.com/okofish/ssmlol). If you want to convert your mp2 files to be usable by Alexa, check out [this website](https://www.jovo.tech/audio-converter).
+A node module for validating your MP3 files to be used in your Amazon Alexa skill. If you are looking for a CLI version, check out [ssmlol](https://github.com/okofish/ssmlol). If you want to convert your MP3 files to be usable by Alexa, check out [this website](https://www.jovo.tech/audio-converter).
+
+## Upgrading from < 1.0
+If you are upgrading from < 1.0, please see [UPGRADING](UPGRADING.md) for migration instructions.
 
 ### Requirements of Alexa-ready MP3 Files
 
