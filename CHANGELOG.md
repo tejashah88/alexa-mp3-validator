@@ -3,7 +3,7 @@
 ### 1.x (Next)
 * Your commit here
 
-### 1.0.3 (July/9/2018)
+### 1.0.3 (July/9/2019)
 * Updated dependencies to resolve moderate DDoS security vulnerabilities. Travis CI integration now working for Node.js LTS versions 6 through 12. - [@tejashah88](https://github.com/tejashah88)
 
 ### 1.0.2 (June/7/2018)
