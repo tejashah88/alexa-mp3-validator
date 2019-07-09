@@ -10,12 +10,12 @@ describe('AudioValidationError', function() {
   });
 
   it('should throw an AudioValidationError', function() {
-    let throwFn = function () { throw new AudioValidationError(EXAMPLE_MSG); };
+    const throwFn = function () { throw new AudioValidationError(EXAMPLE_MSG); };
     expect(throwFn).to.throw(AudioValidationError, EXAMPLE_MSG);
   });
 
   it('should be an object from AudioValidationError and inherit from the Error class', function() {
-    let avError = new AudioValidationError(EXAMPLE_MSG);
+    const avError = new AudioValidationError(EXAMPLE_MSG);
     expect(avError).to.be.an.instanceof(AudioValidationError);
     expect(avError).to.be.an.instanceof(Error);
   });

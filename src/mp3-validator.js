@@ -9,7 +9,7 @@ const getMp3Metadata = require('./mp3-metadata');
 function validateMP3(filepath, throwOnValidationError = false) {
   return utils.getFileBuffer(filepath)
     .then(buffer => {
-      let metadata = getMp3Metadata(buffer);
+      const metadata = getMp3Metadata(buffer);
       if (metadata.version !== 2)
         throw new AudioValidationError(`Expected MP3 Version to be 2.0 but got ${metadata.version.toFixed(1)}.`);
       if (metadata.samplingRate !== 16000)

@@ -11,10 +11,10 @@ const fileInfos = require('./fixtures/metadata.json');
 
 describe('mp3-metadata', function() {
   describe('#getMp3Metadata()', function() {
-    for (let fileInfo of fileInfos) {
+    for (const fileInfo of fileInfos) {
       it(`${fileInfo.name}.mp3 should return the correct metadata`, function() {
-        let sampleFile = `./test/fixtures/${fileInfo.name}.mp3`;
-        let promisedMetadata = utils.getFileBuffer(sampleFile).then(buffer => getMp3Metadata(buffer));
+        const sampleFile = `./test/fixtures/${fileInfo.name}.mp3`;
+        const promisedMetadata = utils.getFileBuffer(sampleFile).then(buffer => getMp3Metadata(buffer));
         return expect(promisedMetadata).to.eventually.deep.equal(fileInfo.metadata);
       });
     }

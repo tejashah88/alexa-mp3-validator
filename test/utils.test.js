@@ -22,10 +22,10 @@ describe('utils', function() {
   });
 
   describe('#getFileBuffer()', function() {
-    for (let fileInfo of fileInfos) {
+    for (const fileInfo of fileInfos) {
       describe(`with ${fileInfo.name}.mp3`, function() {
-        let sampleFile = `./test/fixtures/${fileInfo.name}.mp3`;
-        let promisedBuffer = utils.getFileBuffer(sampleFile);
+        const sampleFile = `./test/fixtures/${fileInfo.name}.mp3`;
+        const promisedBuffer = utils.getFileBuffer(sampleFile);
 
         it('should return a fulfilled Promise', function() {
           return Promise.all([
@@ -44,8 +44,8 @@ describe('utils', function() {
     }
 
     it('should fail when trying to read from an invalid path', function () {
-      let sampleFile = `./test/fixtures/invalid.mp3`;
-      let invalidPromisedBuffer = utils.getFileBuffer(sampleFile);
+      const sampleFile = `./test/fixtures/invalid.mp3`;
+      const invalidPromisedBuffer = utils.getFileBuffer(sampleFile);
 
       it('should return a fulfilled Promise', function() {
         return Promise.all([

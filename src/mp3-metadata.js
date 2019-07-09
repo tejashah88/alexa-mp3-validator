@@ -16,10 +16,10 @@ const utils = require('./utils');
  */
 module.exports = function getMp3Metadata(buffer) {
   let pos = buffer.indexOf(0xFF);
-  let versions = [], bitrates = [], samplingRates = [];
+  const versions = [], bitrates = [], samplingRates = [];
 
   while (pos >= 0) {
-    let header = new Mp3Header(buffer.slice(pos, pos + 4));
+    const header = new Mp3Header(buffer.slice(pos, pos + 4));
     if (header.parsed && header.is_valid && header.mpeg_bitrate && header.mpeg_samplerate) {
       versions.push(header.mpeg_version);
       bitrates.push(header.mpeg_bitrate);

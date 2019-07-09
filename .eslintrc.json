@@ -4,15 +4,42 @@
     "node": true,
     "mocha": true
   },
-  "parserOptions": {
-    "ecmaVersion": 2015,
-    "sourceType": "module"
-  },
   "extends": "eslint:recommended",
   "rules": {
     "require-await": "error",
-    "indent": ["error", 2, { "SwitchCase": 1 }],
-    "quotes": ["error", "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
-    "semi": ["error", "always"]
+    "indent": [
+      "warn",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "prefer-const": [
+			"warn",
+			{
+				"destructuring": "any",
+				"ignoreReadBeforeAssign": false
+			}
+		],
+    "quotes": [
+      "warn",
+      "single",
+      {
+        "avoidEscape": true,
+        "allowTemplateLiterals": true
+      }
+    ],
+    "linebreak-style": [
+			"warn",
+			"unix"
+		],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "strict": [
+			"error",
+			"global"
+		]
   }
 }

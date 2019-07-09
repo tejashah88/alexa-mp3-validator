@@ -12,18 +12,18 @@ const fileInfos = require('./fixtures/metadata.json');
 describe('mp3-validator', function() {
   describe('#validateMP3()', function() {
     describe('with throwOnValidationError = false', function() {
-      for (let fileInfo of fileInfos) {
+      for (const fileInfo of fileInfos) {
         it(`${fileInfo.name}.mp3 should ${fileInfo.alexaReady ? 'pass' : 'fail'} the MP3 validation`, function() {
-          let sampleFile = `./test/fixtures/${fileInfo.name}.mp3`;
+          const sampleFile = `./test/fixtures/${fileInfo.name}.mp3`;
           return expect(validateMP3(sampleFile)).to.eventually.equal(fileInfo.alexaReady);
         });
       }
     });
 
     describe('with throwOnValidationError = true', function() {
-      for (let fileInfo of fileInfos) {
+      for (const fileInfo of fileInfos) {
         it(`${fileInfo.name}.mp3 should ${fileInfo.alexaReady ? 'pass' : 'fail'} the MP3 validation`, function() {
-          let sampleFile = `./test/fixtures/${fileInfo.name}.mp3`;
+          const sampleFile = `./test/fixtures/${fileInfo.name}.mp3`;
           if (fileInfo.alexaReady)
             return expect(validateMP3(sampleFile, true)).to.eventually.equal(fileInfo.alexaReady);
           else
